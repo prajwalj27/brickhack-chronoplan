@@ -75,7 +75,7 @@ const AddTask = () => {
 
   return (
     <section className="flex flex-col items-center justify-center mt-5">
-      <form className="flex flex-col w-[55%] clear-start bg-white p-5 rounded-lg">
+      <form className="flex flex-col clear-start bg-white p-5 rounded-lg">
         <div className="flex flex-row items-center bg-white justify-between">
           <input
             type="text"

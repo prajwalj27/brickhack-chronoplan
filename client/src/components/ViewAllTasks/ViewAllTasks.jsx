@@ -22,15 +22,21 @@ const ViewAllTasks = () => {
         View your tasks for today
       </h1>
       <table>
-        {data.map(({ index, summary, start, end }) => (
-          <tr>
-            <th>
-              {start.split("T")[1].split("-")[0]} -{" "}
-              {end.split("T")[1].split("-")[0]}
-            </th>
-            <td className="pl-5">{summary}</td>
-          </tr>
-        ))}
+      {data.map(({ summary, start, end }) => {
+          const startTimeStamp = start.split("T")[1].split("-")[0].split(":");
+          const startTime = `${startTimeStamp[0]}:${startTimeStamp[1]}`;
+          const endTimeStamp = end.split("T")[1].split("-")[0].split(":")
+          const endTime = `${endTimeStamp[0]}:${endTimeStamp[1]}`;
+          return (
+            <tr>
+              <th>
+                {startTime} -{" "}
+                {endTime}
+              </th>
+              <td className="pl-5">{summary}</td>
+            </tr>
+          );
+        })}
       </table>
     </section>
   );

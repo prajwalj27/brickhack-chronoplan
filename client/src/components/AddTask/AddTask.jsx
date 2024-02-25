@@ -41,12 +41,14 @@ const AddTask = () => {
     data.date &&
       setTaskDetails((prevState) => ({
         ...prevState,
+        start_date: data.date,
         end_date: data.date,
       }));
 
     data.time &&
       setTaskDetails((prevState) => ({
         ...prevState,
+        start_time: data.time,
         end_time: data.time,
       }));
   };

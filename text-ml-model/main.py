@@ -142,7 +142,12 @@ def hello_world():
 @app.route('/text-ai')
 def text_ai():
   title = request.args.get('title') 
-  return get_details(title)
+  try:
+    details = get_details(title)
+    return get_details(title)
+  except Error:
+    print("Unable to get details")
+    return "None"
 
 app.run()
 

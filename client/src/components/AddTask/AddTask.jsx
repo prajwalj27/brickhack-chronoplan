@@ -200,6 +200,9 @@ const AddTask = () => {
             miscellaneous
           </option>
         </select>
+        <p className="text-center mb-5 bg-transparent">
+          Clicking "Add Task" will add the task to your Google Calendar!
+        </p>
         <div className="flex flex-row items-center bg-white justify-center">
           <input
             type="button"
